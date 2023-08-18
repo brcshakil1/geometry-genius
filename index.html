@@ -14,7 +14,7 @@
     </header>
     <main>
         <!-- main container -->
-        <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:justify-between lg:flex-row">
             <!-- shape -->
             <div class="grid md:grid-cols-3 gap-4">
                 <!-- first -->
@@ -59,21 +59,41 @@
                   </div>
                   <!-- third -->
                   <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body">
-                      <h2 class="card-title">Rhombus</h2>
+                      <h2 class="card-title">Parallelogram</h2>
                       <p>Area (A) = w x l</p>
                       <p>
-                        <!-- rhombus base -->
-                        <input type="text" class="border w-20 px-2 bg-gray-200" placeholder="base" id="rhombus-base">
+                        <!-- parallelogram base -->
+                        <input type="text" class="border w-20 px-2 bg-gray-200" placeholder="base" id="parallelogram-base">
                         <span>cm</span>
-                        <!-- rhombus height -->
-                        <input type="text" class="border w-20 px-2 bg-gray-200 ml-4" placeholder="height" id="rhombus-height">
+                        <!-- parallelogram height -->
+                        <input type="text" class="border w-20 px-2 bg-gray-200 ml-4" placeholder="height" id="parallelogram-height">
                         <span>cm</span>
                       </p>
-                      <p class="text-2xl">Area: <span id="rhombus-area" class="font-bold"></span></p>
+                      <p class="text-2xl">Area: <span id="parallelogram-area" class="font-bold"></span></p>
                       <div class="card-actions justify-end">
-                        <button class="btn w-full  btn-primary" onclick="calculateTriangleArea()">Calculate</button>
+                        <button class="btn w-full  btn-primary" onclick="calculateParallelogramArea()">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fourth -->
+                  <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p>Area (A) = πab</p>
+                      <p>
+                        <!-- ellipse base -->
+                        <input type="text" class="border w-20 px-2 bg-gray-200" placeholder="large" id="ellipse-major-radius">
+                        <span>cm</span>
+                        <!-- ellipse height -->
+                        <input type="text" class="border w-20 px-2 bg-gray-200 ml-4" placeholder="short" id="ellipse-minor-radius">
+                        <span>cm</span>
+                      </p>
+                      <p class="text-2xl">Area: <span id="ellipse-area" class="font-bold"></span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn w-full  btn-primary" onclick="calculateEllipseArea()">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -85,7 +105,6 @@
         </div>
     </main>
     <footer>
-
     </footer>
     <script src="./scripts/area-calculate.js"></script>
 </body>
